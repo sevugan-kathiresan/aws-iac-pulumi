@@ -20,13 +20,24 @@ profile.cov
 # Dependency directories (remove the comment below to include it)
 # vendor/
 
-# Go workspace file
-go.work
-go.work.sum
-
 # env file
 .env
 
 # Editor/IDE
-# .idea/
-# .vscode/
+.idea/
+.vscode/
+*.swp
+
+# Pulumi state and config (if using local backend)
+.pulumi/
+
+# Pulumi auto-generated files per stack
+*.yaml.bak
+
+# AWS credentials — never commit these
+.env
+*.pem
+*.key
+
+# Datadog API keys — never commit these
+secrets.yaml
