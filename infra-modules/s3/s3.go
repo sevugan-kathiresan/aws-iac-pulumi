@@ -15,7 +15,7 @@ type InputBucketArgs struct {
 // Struct to hold the output of the created S3 bucket
 type Bucket struct {
 	pulumi.ResourceState                     // Embedding the pulumi resourcesate type without the field name. When you embed a type without a field name, Go automatically promotes all the fields and methods of that type into your struct.
-	BucketId             pulumi.StringOutput // String.Output -> An asynchronous asynchronous "promise" that may not be known until after a resource is created.
+	BucketID             pulumi.StringOutput // String.Output -> An asynchronous asynchronous "promise" that may not be known until after a resource is created.
 	BucketArn            pulumi.StringOutput
 }
 
@@ -57,7 +57,7 @@ func NewBucket(ctx *pulumi.Context, name string, args *InputBucketArgs, opts ...
 	}
 
 	return &Bucket{
-		BucketId:  bucket.ID().ToStringOutput(), // Pulumi returns the bucket id as the type IDOutput so we need to explicityly convert the type to StringOutput
+		BucketID:  bucket.ID().ToStringOutput(), // Pulumi returns the bucket id as the type IDOutput so we need to explicityly convert the type to StringOutput
 		BucketArn: bucket.Arn,
 	}, nil
 
