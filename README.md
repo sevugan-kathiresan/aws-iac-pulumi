@@ -42,17 +42,16 @@ aws-iac-pulumi/
 │   ├── s3/                      # S3 bucket component
 │   └── ...                      # Grows as new architectures are added
 │
-├── go.work                      # Go workspace (see note below for the reason on why this is added to the source control)
-├── go.work.sum
+├── go.mod
+├── go.sum
 ├── LICENSE
 └── README.md
 ```
 
-### Module Design
+### Package Design
 
-**`helper-modules`** contains pure Go utilities that support infrastructure
+**`helper-modules`** contains pure Go packages with utilities that support infrastructure
 code — things like tagging helpers, naming conventions, and config utilities.
-These have no direct dependency on AWS resources.
 
 **`infra-modules`** contains reusable Pulumi ComponentResources — each one
 wraps one or more AWS resources into a well-defined, configurable building
