@@ -30,6 +30,7 @@ profile.cov
 
 # Pulumi state and config (if using local backend)
 .pulumi/
+*.pulumistate
 
 # Pulumi auto-generated files per stack
 *.yaml.bak
@@ -41,3 +42,7 @@ profile.cov
 
 # Datadog API keys — never commit these
 secrets.yaml
+
+# Go
+go.work
+go.work.sum
