@@ -44,7 +44,7 @@ func NewDistribution(ctx *pulumi.Context, name string, args *InputDistributionAr
 		//Origin Definition
 		Origins: cloudfront.DistributionOriginArray{
 			&cloudfront.DistributionOriginArgs{
-				OriginId: args.BucketID, // used to link cache behaviour to origin
+				OriginId: args.BucketID, // used to link distributin to the origin
 				DomainName: args.BucketID.ApplyT(func(id string) string { // creating s3 domain name from bucket id -> this domain is a the S3 rest endpoint not website URL
 					return id + ".s3.amazonaws.com"
 				}).(pulumi.StringOutput),
