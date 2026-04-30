@@ -31,6 +31,7 @@ profile.cov
 # Pulumi state and config (if using local backend)
 .pulumi/
 *.pulumistate
+Pulumi.dev.yaml
 
 # Pulumi auto-generated files per stack
 *.yaml.bak
