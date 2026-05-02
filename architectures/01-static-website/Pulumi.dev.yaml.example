@@ -1,0 +1,7 @@
+config:
+  aws:region: <your-preferred-region>
+  01-static-website:bucketName: <your-bucket-name>
+  01-static-website:creator: <your-name>
+  01-static-website:team: <your-team>
+  01-static-website:service: static-website
+  01-static-website:env: dev
